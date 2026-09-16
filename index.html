@@ -165,19 +165,24 @@
     }
 
     .lang-chip {
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 700;
       color: var(--primary);
       background: rgba(56, 189, 248, 0.1);
       border: 1px solid rgba(56, 189, 248, 0.3);
       border-radius: 999px;
-      padding: 4px 14px;
+      padding: 6px 18px;
       text-decoration: none;
+      cursor: pointer;
     }
 
     .lang-chip.current {
       background: var(--primary);
       color: #0b0f19;
+    }
+
+    .tab-panel[hidden] {
+      display: none;
     }
 
     footer {
@@ -197,134 +202,230 @@
       <p class="subtitle">Support, player FAQs, and Privacy Policy for iOS</p>
     </header>
 
-    <!-- SUPPORT -->
+    <!-- SUPPORT (tabbed: en / fr / ja) -->
     <section class="card" id="support">
       <h2 class="card-title"><span>✉️</span> Support & Contact</h2>
-      <p style="font-size: 14.5px; color: var(--text-muted);">
-        Have questions, feedback, or need help with a purchase? Contact us directly:
-      </p>
+      <div class="lang-chips">
+        <a class="lang-chip current" href="#support-en" data-panel="support-en">English</a>
+        <a class="lang-chip" href="#support-fr" data-panel="support-fr">Français</a>
+        <a class="lang-chip" href="#support-ja" data-panel="support-ja">日本語</a>
+      </div>
 
-      <div class="contact-box">
-        <div style="font-size: 13px; color: var(--text-muted);">Developer Support Email</div>
-        <a class="contact-email" href="mailto:abhi32eee@gmail.com?subject=Chainline%20Support">abhi32eee@gmail.com</a>
-        <div>
-          <a class="btn" href="mailto:abhi32eee@gmail.com?subject=Chainline%20Support">Send Email</a>
+      <div class="tab-panel" id="support-en">
+        <p style="font-size: 14.5px; color: var(--text-muted);">
+          Have questions, feedback, or need help with a purchase? Contact us directly:
+        </p>
+        <div class="contact-box">
+          <div style="font-size: 13px; color: var(--text-muted);">Developer Support Email</div>
+          <a class="contact-email" href="mailto:abhi32eee@gmail.com?subject=Chainline%20Support">abhi32eee@gmail.com</a>
+          <div>
+            <a class="btn" href="mailto:abhi32eee@gmail.com?subject=Chainline%20Support">Send Email</a>
+          </div>
+        </div>
+        <div style="height: 14px;"></div>
+        <div class="faq-item">
+          <div class="faq-q">How do I restore my purchases?</div>
+          <div class="faq-a">
+            Open the in-game Shop from the main menu, scroll to the bottom, and tap <strong>"Restore Purchases"</strong>. Apple StoreKit will verify your Apple ID and re-activate your items.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How does Game Center work?</div>
+          <div class="faq-a">
+            Sign into Game Center in your device's <em>Settings &rarr; Game Center</em>. Your altitude scores and unlocked achievements automatically sync to the global leaderboards.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can I play offline?</div>
+          <div class="faq-a">
+            Yes! The physics climber is fully playable offline. Scores and achievements will sync whenever you reconnect to the internet.
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="support-fr" lang="fr" hidden>
+        <h3 style="font-family:'Outfit',sans-serif;font-size:16px;font-weight:800;color:#ffffff;margin-bottom:10px;">Assistance & Contact</h3>
+        <p style="font-size: 14.5px; color: var(--text-muted);">
+          Des questions, des retours ou un souci d'achat ? Contacte-nous directement :
+        </p>
+        <div class="contact-box">
+          <div style="font-size: 13px; color: var(--text-muted);">E-mail du support</div>
+          <a class="contact-email" href="mailto:abhi32eee@gmail.com?subject=Chainline%20Support">abhi32eee@gmail.com</a>
+          <div>
+            <a class="btn" href="mailto:abhi32eee@gmail.com?subject=Chainline%20Support">Envoyer un e-mail</a>
+          </div>
+        </div>
+        <div style="height: 14px;"></div>
+        <div class="faq-item">
+          <div class="faq-q">Comment restaurer mes achats ?</div>
+          <div class="faq-a">
+            Ouvre la Boutique depuis le menu principal, descends tout en bas et appuie sur <strong>« Restaurer les achats »</strong>. Apple StoreKit vérifie ton identifiant Apple et réactive tes articles.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Comment fonctionne le Game Center ?</div>
+          <div class="faq-a">
+            Connecte-toi au Game Center dans les <em>Réglages &rarr; Game Center</em> de ton appareil. Tes records d'altitude et tes succès se synchronisent automatiquement avec les classements mondiaux.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Peux-tu jouer hors ligne ?</div>
+          <div class="faq-a">
+            Oui ! Le jeu se joue entièrement hors ligne. Les scores et les succès se synchronisent dès que tu te reconnectes.
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="support-ja" lang="ja" hidden>
+        <h3 style="font-family:'Outfit',sans-serif;font-size:16px;font-weight:800;color:#ffffff;margin-bottom:10px;">サポート & お問い合わせ</h3>
+        <p style="font-size: 14.5px; color: var(--text-muted);">
+          ご質問・フィードバック・購入に関するお困りごとは、こちらまでご連絡ください：
+        </p>
+        <div class="contact-box">
+          <div style="font-size: 13px; color: var(--text-muted);">サポートメール</div>
+          <a class="contact-email" href="mailto:abhi32eee@gmail.com?subject=Chainline%20Support">abhi32eee@gmail.com</a>
+          <div>
+            <a class="btn" href="mailto:abhi32eee@gmail.com?subject=Chainline%20Support">メールを送る</a>
+          </div>
+        </div>
+        <div style="height: 14px;"></div>
+        <div class="faq-item">
+          <div class="faq-q">購入を復元するには？</div>
+          <div class="faq-a">
+            メインメニューからショップを開き、一番下の<strong>「購入を復元」</strong>をタップしてください。Apple StoreKitがお使いのApple IDを確認し、アイテムを再アクティブ化します。
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Game Centerの仕組みは？</div>
+          <div class="faq-a">
+            本体の<em>設定 &rarr; Game Center</em>からサインインしてください。最高高度のスコアと解放した実績が、自動で世界ランキングに同期されます。
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">オフラインで遊べますか？</div>
+          <div class="faq-a">
+            はい！物理クライムは完全にオフラインでプレイできます。ネットに再接続したときにスコアと実績が同期されます。
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQS -->
-    <section class="card">
-      <h2 class="card-title"><span>💡</span> Frequently Asked Questions</h2>
-
-      <div class="faq-item">
-        <div class="faq-q">How do I restore my purchases?</div>
-        <div class="faq-a">
-          Open the in-game Shop from the main menu, scroll to the bottom, and tap <strong>"Restore Purchases"</strong>. Apple StoreKit will verify your Apple ID and re-activate your items.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q">How does Game Center work?</div>
-        <div class="faq-a">
-          Sign into Game Center in your device’s <em>Settings &rarr; Game Center</em>. Your altitude scores and unlocked achievements automatically sync to the global leaderboards.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q">Can I play offline?</div>
-        <div class="faq-a">
-          Yes! The physics climber is fully playable offline. Scores and achievements will sync whenever you reconnect to the internet.
-        </div>
-      </div>
-    </section>
-
-    <!-- PRIVACY POLICY -->
+    <!-- PRIVACY POLICY (tabbed: en / fr / ja) -->
     <section class="card" id="privacy">
       <h2 class="card-title"><span>🔒</span> Privacy Policy</h2>
       <div class="lang-chips">
-        <a class="lang-chip current" href="#privacy">English</a>
-        <a class="lang-chip" href="#privacy-fr">Français</a>
-        <a class="lang-chip" href="#privacy-ja">日本語</a>
+        <a class="lang-chip current" href="#privacy-en" data-panel="privacy-en">English</a>
+        <a class="lang-chip" href="#privacy-fr" data-panel="privacy-fr">Français</a>
+        <a class="lang-chip" href="#privacy-ja" data-panel="privacy-ja">日本語</a>
       </div>
-      <p class="policy-p">
-        <strong>Last updated:</strong> September 2026
-      </p>
-      <p class="policy-p">
-        <strong>1. Personal Data:</strong> Chainline does not require user registration or account creation. We do not collect, store, sell, or rent your personal identifiable information.
-      </p>
-      <p class="policy-p">
-        <strong>2. Game Center & iCloud:</strong> Leaderboards and achievements communicate securely through Apple's native Game Center APIs in accordance with Apple's Privacy Policy.
-      </p>
-      <p class="policy-p">
-        <strong>3. Purchases:</strong> In-app purchases are handled directly through Apple StoreKit. We never access or store your financial or payment details.
-      </p>
-      <p class="policy-p">
-        <strong>4. Advertisements:</strong> Ads are served by Unity LevelPlay (Unity Ads, operated by Unity Technologies), strictly conforming to Apple's App Tracking Transparency (ATT) guidelines. You are asked for tracking permission first; if you decline, only contextual, non-personalized ads are delivered. To serve and measure ads, Unity may process limited device data such as your advertising identifier, IP address, and general usage signals. Unity's handling of this data is described in Unity's Privacy Policy (<a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener" style="color:var(--primary);text-decoration:none;">unity.com/legal/privacy-policy</a>) and Unity's game data &amp; privacy overview (<a href="https://unity.com/legal/game-data-and-privacy" target="_blank" rel="noopener" style="color:var(--primary);text-decoration:none;">unity.com/legal/game-data-and-privacy</a>).
-      </p>
-      <p class="policy-p">
-        <strong>5. Contact:</strong> For any privacy-related inquiries, email us at <a href="mailto:abhi32eee@gmail.com" style="color:var(--primary);text-decoration:none;">abhi32eee@gmail.com</a>.
-      </p>
-    </section>
 
-    <section class="card" id="privacy-fr" lang="fr">
-      <h2 class="card-title"><span>🔒</span> Politique de confidentialité</h2>
-      <div class="lang-chips">
-        <a class="lang-chip" href="#privacy">English</a>
-        <a class="lang-chip current" href="#privacy-fr">Français</a>
-        <a class="lang-chip" href="#privacy-ja">日本語</a>
+      <div class="tab-panel" id="privacy-en">
+        <p class="policy-p">
+          <strong>Last updated:</strong> September 2026
+        </p>
+        <p class="policy-p">
+          <strong>1. Personal Data:</strong> Chainline does not require user registration or account creation. We do not collect, store, sell, or rent your personal identifiable information.
+        </p>
+        <p class="policy-p">
+          <strong>2. Game Center & iCloud:</strong> Leaderboards and achievements communicate securely through Apple's native Game Center APIs in accordance with Apple's Privacy Policy.
+        </p>
+        <p class="policy-p">
+          <strong>3. Purchases:</strong> In-app purchases are handled directly through Apple StoreKit. We never access or store your financial or payment details.
+        </p>
+        <p class="policy-p">
+          <strong>4. Advertisements:</strong> Ads are served by Unity LevelPlay (Unity Ads, operated by Unity Technologies), strictly conforming to Apple's App Tracking Transparency (ATT) guidelines. You are asked for tracking permission first; if you decline, only contextual, non-personalized ads are delivered. To serve and measure ads, Unity may process limited device data such as your advertising identifier, IP address, and general usage signals. Unity's handling of this data is described in Unity's Privacy Policy (<a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener" style="color:var(--primary);text-decoration:none;">unity.com/legal/privacy-policy</a>) and Unity's game data &amp; privacy overview (<a href="https://unity.com/legal/game-data-and-privacy" target="_blank" rel="noopener" style="color:var(--primary);text-decoration:none;">unity.com/legal/game-data-and-privacy</a>).
+        </p>
+        <p class="policy-p">
+          <strong>5. Contact:</strong> For any privacy-related inquiries, email us at <a href="mailto:abhi32eee@gmail.com" style="color:var(--primary);text-decoration:none;">abhi32eee@gmail.com</a>.
+        </p>
       </div>
-      <p class="policy-p">
-        <strong>Dernière mise à jour :</strong> septembre 2026
-      </p>
-      <p class="policy-p">
-        <strong>1. Données personnelles :</strong> Chainline ne requiert aucune inscription ni création de compte. Nous ne collectons, ne stockons, ne vendons ni ne louons vos informations personnelles identifiables.
-      </p>
-      <p class="policy-p">
-        <strong>2. Game Center &amp; iCloud :</strong> Les classements et les succès communiquent de manière sécurisée via les API natives du Game Center d'Apple, conformément à la Politique de confidentialité d'Apple.
-      </p>
-      <p class="policy-p">
-        <strong>3. Achats :</strong> Les achats intégrés sont traités directement par Apple StoreKit. Nous n'accédons jamais à vos informations financières et ne les stockons pas.
-      </p>
-      <p class="policy-p">
-        <strong>4. Publicités :</strong> Les publicités sont diffusées par Unity LevelPlay (Unity Ads, exploité par Unity Technologies), en stricte conformité avec les directives App Tracking Transparency (ATT) d'Apple. L'autorisation de suivi vous est d'abord demandée ; en cas de refus, seules des publicités contextuelles non personnalisées sont diffusées. Pour diffuser et mesurer les publicités, Unity peut traiter des données limitées de l'appareil, telles que votre identifiant publicitaire, votre adresse IP et des signaux d'utilisation généraux. Le traitement de ces données par Unity est décrit dans la Politique de confidentialité d'Unity (<a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener" style="color:var(--primary);text-decoration:none;">unity.com/legal/privacy-policy</a>) et dans la présentation Données de jeu et confidentialité d'Unity (<a href="https://unity.com/legal/game-data-and-privacy" target="_blank" rel="noopener" style="color:var(--primary);text-decoration:none;">unity.com/legal/game-data-and-privacy</a>).
-      </p>
-      <p class="policy-p">
-        <strong>5. Contact :</strong> Pour toute demande relative à la confidentialité, écrivez-nous à <a href="mailto:abhi32eee@gmail.com" style="color:var(--primary);text-decoration:none;">abhi32eee@gmail.com</a>.
-      </p>
-    </section>
 
-    <section class="card" id="privacy-ja" lang="ja">
-      <h2 class="card-title"><span>🔒</span> プライバシーポリシー</h2>
-      <div class="lang-chips">
-        <a class="lang-chip" href="#privacy">English</a>
-        <a class="lang-chip" href="#privacy-fr">Français</a>
-        <a class="lang-chip current" href="#privacy-ja">日本語</a>
+      <div class="tab-panel" id="privacy-fr" lang="fr" hidden>
+        <h3 style="font-family:'Outfit',sans-serif;font-size:16px;font-weight:800;color:#ffffff;margin-bottom:10px;">Politique de confidentialité</h3>
+        <p class="policy-p">
+          <strong>Dernière mise à jour :</strong> septembre 2026
+        </p>
+        <p class="policy-p">
+          <strong>1. Données personnelles :</strong> Chainline ne requiert aucune inscription ni création de compte. Nous ne collectons, ne stockons, ne vendons ni ne louons vos informations personnelles identifiables.
+        </p>
+        <p class="policy-p">
+          <strong>2. Game Center &amp; iCloud :</strong> Les classements et les succès communiquent de manière sécurisée via les API natives du Game Center d'Apple, conformément à la Politique de confidentialité d'Apple.
+        </p>
+        <p class="policy-p">
+          <strong>3. Achats :</strong> Les achats intégrés sont traités directement par Apple StoreKit. Nous n'accédons jamais à vos informations financières et ne les stockons pas.
+        </p>
+        <p class="policy-p">
+          <strong>4. Publicités :</strong> Les publicités sont diffusées par Unity LevelPlay (Unity Ads, exploité par Unity Technologies), en stricte conformité avec les directives App Tracking Transparency (ATT) d'Apple. L'autorisation de suivi vous est d'abord demandée ; en cas de refus, seules des publicités contextuelles non personnalisées sont diffusées. Pour diffuser et mesurer les publicités, Unity peut traiter des données limitées de l'appareil, telles que votre identifiant publicitaire, votre adresse IP et des signaux d'utilisation généraux. Le traitement de ces données par Unity est décrit dans la Politique de confidentialité d'Unity (<a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener" style="color:var(--primary);text-decoration:none;">unity.com/legal/privacy-policy</a>) et dans la présentation Données de jeu et confidentialité d'Unity (<a href="https://unity.com/legal/game-data-and-privacy" target="_blank" rel="noopener" style="color:var(--primary);text-decoration:none;">unity.com/legal/game-data-and-privacy</a>).
+        </p>
+        <p class="policy-p">
+          <strong>5. Contact :</strong> Pour toute demande relative à la confidentialité, écrivez-nous à <a href="mailto:abhi32eee@gmail.com" style="color:var(--primary);text-decoration:none;">abhi32eee@gmail.com</a>.
+        </p>
       </div>
-      <p class="policy-p">
-        <strong>最終更新：</strong> 2026年9月
-      </p>
-      <p class="policy-p">
-        <strong>1. 個人データ：</strong> Chainlineはユーザー登録やアカウント作成を必要としません。当社は、個人を特定できる情報を収集・保存・販売・貸与することはありません。
-      </p>
-      <p class="policy-p">
-        <strong>2. Game Center &amp; iCloud：</strong> ランキングおよび実績は、Appleのプライバシーポリシーに準拠したAppleのネイティブGame Center APIを通じて安全にやり取りされます。
-      </p>
-      <p class="policy-p">
-        <strong>3. 購入：</strong> アプリ内課金はApple StoreKitを通じて直接処理されます。当社がお客様の金融情報や決済情報にアクセスしたり保存したりすることは決してありません。
-      </p>
-      <p class="policy-p">
-        <strong>4. 広告：</strong> 広告はUnity LevelPlay（Unity Technologiesが運営するUnity Ads）によって配信され、AppleのApp Tracking Transparency（ATT）ガイドラインに厳格に準拠しています。最初に追跡の許可をお尋ねし、拒否された場合は、コンテキストに基づく非パーソナライズ広告のみが配信されます。広告の配信および測定のため、Unityは広告識別子、IPアドレス、一般的な利用シグナルなどの限られたデバイスデータを処理する場合があります。Unityによるこのデータの取り扱いは、Unityのプライバシーポリシー（<a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener" style="color:var(--primary);text-decoration:none;">unity.com/legal/privacy-policy</a>）およびUnityのゲームデータとプライバシーの概要（<a href="https://unity.com/legal/game-data-and-privacy" target="_blank" rel="noopener" style="color:var(--primary);text-decoration:none;">unity.com/legal/game-data-and-privacy</a>）に記載されています。
-      </p>
-      <p class="policy-p">
-        <strong>5. お問い合わせ：</strong> プライバシーに関するお問い合わせは、<a href="mailto:abhi32eee@gmail.com" style="color:var(--primary);text-decoration:none;">abhi32eee@gmail.com</a> までメールでお願いします。
-      </p>
+
+      <div class="tab-panel" id="privacy-ja" lang="ja" hidden>
+        <h3 style="font-family:'Outfit',sans-serif;font-size:16px;font-weight:800;color:#ffffff;margin-bottom:10px;">プライバシーポリシー</h3>
+        <p class="policy-p">
+          <strong>最終更新：</strong> 2026年9月
+        </p>
+        <p class="policy-p">
+          <strong>1. 個人データ：</strong> Chainlineはユーザー登録やアカウント作成を必要としません。当社は、個人を特定できる情報を収集・保存・販売・貸与することはありません。
+        </p>
+        <p class="policy-p">
+          <strong>2. Game Center &amp; iCloud：</strong> ランキングおよび実績は、Appleのプライバシーポリシーに準拠したAppleのネイティブGame Center APIを通じて安全にやり取りされます。
+        </p>
+        <p class="policy-p">
+          <strong>3. 購入：</strong> アプリ内課金はApple StoreKitを通じて直接処理されます。当社がお客様の金融情報や決済情報にアクセスしたり保存したりすることは決してありません。
+        </p>
+        <p class="policy-p">
+          <strong>4. 広告：</strong> 広告はUnity LevelPlay（Unity Technologiesが運営するUnity Ads）によって配信され、AppleのApp Tracking Transparency（ATT）ガイドラインに厳格に準拠しています。最初に追跡の許可をお尋ねし、拒否された場合は、コンテキストに基づく非パーソナライズ広告のみが配信されます。広告の配信および測定のため、Unityは広告識別子、IPアドレス、一般的な利用シグナルなどの限られたデバイスデータを処理する場合があります。Unityによるこのデータの取り扱いは、Unityのプライバシーポリシー（<a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener" style="color:var(--primary);text-decoration:none;">unity.com/legal/privacy-policy</a>）およびUnityのゲームデータとプライバシーの概要（<a href="https://unity.com/legal/game-data-and-privacy" target="_blank" rel="noopener" style="color:var(--primary);text-decoration:none;">unity.com/legal/game-data-and-privacy</a>）に記載されています。
+        </p>
+        <p class="policy-p">
+          <strong>5. お問い合わせ：</strong> プライバシーに関するお問い合わせは、<a href="mailto:abhi32eee@gmail.com" style="color:var(--primary);text-decoration:none;">abhi32eee@gmail.com</a> までメールでお願いします。
+        </p>
+      </div>
     </section>
 
     <footer>
       <p>© 2026 Abhinav Kumar. All rights reserved.</p>
     </footer>
   </div>
+
+  <script>
+    function activateTab(panelId) {
+      var group = panelId.replace(/-(en|fr|ja)$/, '');
+      document.querySelectorAll('.lang-chip[data-panel^="' + group + '-"]').forEach(function (chip) {
+        chip.classList.toggle('current', chip.getAttribute('data-panel') === panelId);
+      });
+      document.querySelectorAll('.tab-panel[id^="' + group + '-"]').forEach(function (p) {
+        p.hidden = p.id !== panelId;
+      });
+    }
+
+    function handleHash() {
+      var h = (location.hash || '').replace('#', '');
+      if (/^privacy-(en|fr|ja)$/.test(h)) {
+        activateTab(h);
+        var el = document.getElementById('privacy');
+        if (el) el.scrollIntoView({ block: 'start' });
+        return true;
+      }
+      if (/^support-(en|fr|ja)$/.test(h)) {
+        activateTab(h);
+        var s = document.getElementById('support');
+        if (s) s.scrollIntoView({ block: 'start' });
+        return true;
+      }
+      return false;
+    }
+
+    window.addEventListener('hashchange', handleHash);
+    window.addEventListener('DOMContentLoaded', function () {
+      if (!handleHash()) {
+        activateTab('support-en');
+        activateTab('privacy-en');
+      }
+    });
+  </script>
 
 </body>
 </html>
