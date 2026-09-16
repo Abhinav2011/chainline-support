@@ -158,6 +158,28 @@
       margin-bottom: 0;
     }
 
+    .lang-chips {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .lang-chip {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 999px;
+      padding: 4px 14px;
+      text-decoration: none;
+    }
+
+    .lang-chip.current {
+      background: var(--primary);
+      color: #0b0f19;
+    }
+
     footer {
       text-align: center;
       margin-top: 20px;
@@ -220,6 +242,11 @@
     <!-- PRIVACY POLICY -->
     <section class="card" id="privacy">
       <h2 class="card-title"><span>🔒</span> Privacy Policy</h2>
+      <div class="lang-chips">
+        <a class="lang-chip current" href="#privacy">English</a>
+        <a class="lang-chip" href="#privacy-fr">Français</a>
+        <a class="lang-chip" href="#privacy-ja">日本語</a>
+      </div>
       <p class="policy-p">
         <strong>Last updated:</strong> September 2026
       </p>
@@ -237,6 +264,60 @@
       </p>
       <p class="policy-p">
         <strong>5. Contact:</strong> For any privacy-related inquiries, email us at <a href="mailto:abhi32eee@gmail.com" style="color:var(--primary);text-decoration:none;">abhi32eee@gmail.com</a>.
+      </p>
+    </section>
+
+    <section class="card" id="privacy-fr" lang="fr">
+      <h2 class="card-title"><span>🔒</span> Politique de confidentialité</h2>
+      <div class="lang-chips">
+        <a class="lang-chip" href="#privacy">English</a>
+        <a class="lang-chip current" href="#privacy-fr">Français</a>
+        <a class="lang-chip" href="#privacy-ja">日本語</a>
+      </div>
+      <p class="policy-p">
+        <strong>Dernière mise à jour :</strong> septembre 2026
+      </p>
+      <p class="policy-p">
+        <strong>1. Données personnelles :</strong> Chainline ne requiert aucune inscription ni création de compte. Nous ne collectons, ne stockons, ne vendons ni ne louons vos informations personnelles identifiables.
+      </p>
+      <p class="policy-p">
+        <strong>2. Game Center &amp; iCloud :</strong> Les classements et les succès communiquent de manière sécurisée via les API natives du Game Center d'Apple, conformément à la Politique de confidentialité d'Apple.
+      </p>
+      <p class="policy-p">
+        <strong>3. Achats :</strong> Les achats intégrés sont traités directement par Apple StoreKit. Nous n'accédons jamais à vos informations financières et ne les stockons pas.
+      </p>
+      <p class="policy-p">
+        <strong>4. Publicités :</strong> Les publicités sont diffusées par Unity LevelPlay (Unity Ads, exploité par Unity Technologies), en stricte conformité avec les directives App Tracking Transparency (ATT) d'Apple. L'autorisation de suivi vous est d'abord demandée ; en cas de refus, seules des publicités contextuelles non personnalisées sont diffusées. Pour diffuser et mesurer les publicités, Unity peut traiter des données limitées de l'appareil, telles que votre identifiant publicitaire, votre adresse IP et des signaux d'utilisation généraux. Le traitement de ces données par Unity est décrit dans la Politique de confidentialité d'Unity (<a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener" style="color:var(--primary);text-decoration:none;">unity.com/legal/privacy-policy</a>) et dans la présentation Données de jeu et confidentialité d'Unity (<a href="https://unity.com/legal/game-data-and-privacy" target="_blank" rel="noopener" style="color:var(--primary);text-decoration:none;">unity.com/legal/game-data-and-privacy</a>).
+      </p>
+      <p class="policy-p">
+        <strong>5. Contact :</strong> Pour toute demande relative à la confidentialité, écrivez-nous à <a href="mailto:abhi32eee@gmail.com" style="color:var(--primary);text-decoration:none;">abhi32eee@gmail.com</a>.
+      </p>
+    </section>
+
+    <section class="card" id="privacy-ja" lang="ja">
+      <h2 class="card-title"><span>🔒</span> プライバシーポリシー</h2>
+      <div class="lang-chips">
+        <a class="lang-chip" href="#privacy">English</a>
+        <a class="lang-chip" href="#privacy-fr">Français</a>
+        <a class="lang-chip current" href="#privacy-ja">日本語</a>
+      </div>
+      <p class="policy-p">
+        <strong>最終更新：</strong> 2026年9月
+      </p>
+      <p class="policy-p">
+        <strong>1. 個人データ：</strong> Chainlineはユーザー登録やアカウント作成を必要としません。当社は、個人を特定できる情報を収集・保存・販売・貸与することはありません。
+      </p>
+      <p class="policy-p">
+        <strong>2. Game Center &amp; iCloud：</strong> ランキングおよび実績は、Appleのプライバシーポリシーに準拠したAppleのネイティブGame Center APIを通じて安全にやり取りされます。
+      </p>
+      <p class="policy-p">
+        <strong>3. 購入：</strong> アプリ内課金はApple StoreKitを通じて直接処理されます。当社がお客様の金融情報や決済情報にアクセスしたり保存したりすることは決してありません。
+      </p>
+      <p class="policy-p">
+        <strong>4. 広告：</strong> 広告はUnity LevelPlay（Unity Technologiesが運営するUnity Ads）によって配信され、AppleのApp Tracking Transparency（ATT）ガイドラインに厳格に準拠しています。最初に追跡の許可をお尋ねし、拒否された場合は、コンテキストに基づく非パーソナライズ広告のみが配信されます。広告の配信および測定のため、Unityは広告識別子、IPアドレス、一般的な利用シグナルなどの限られたデバイスデータを処理する場合があります。Unityによるこのデータの取り扱いは、Unityのプライバシーポリシー（<a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener" style="color:var(--primary);text-decoration:none;">unity.com/legal/privacy-policy</a>）およびUnityのゲームデータとプライバシーの概要（<a href="https://unity.com/legal/game-data-and-privacy" target="_blank" rel="noopener" style="color:var(--primary);text-decoration:none;">unity.com/legal/game-data-and-privacy</a>）に記載されています。
+      </p>
+      <p class="policy-p">
+        <strong>5. お問い合わせ：</strong> プライバシーに関するお問い合わせは、<a href="mailto:abhi32eee@gmail.com" style="color:var(--primary);text-decoration:none;">abhi32eee@gmail.com</a> までメールでお願いします。
       </p>
     </section>
 
